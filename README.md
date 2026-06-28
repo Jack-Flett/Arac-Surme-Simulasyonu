@@ -27,7 +27,7 @@ OpenGL tabanlı, gerçek zamanlı bir araç sürme simülasyonu. PyOpenGL ve Pyg
 
 1. Depoyu klonlayın:
    ```bash
-   git clone https://github.com/KULLANICI_ADINIZ/arac-surme-simulasyonu.git
+   git clone https://github.com/Jack-Flett/Arac-Surme-Simulasyonu.git
    cd arac-surme-simulasyonu
    ```
 
