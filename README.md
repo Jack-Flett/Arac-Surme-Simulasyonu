@@ -20,8 +20,24 @@ OpenGL tabanlı, gerçek zamanlı bir araç sürme simülasyonu. PyOpenGL ve Pyg
 
 ### Gereksinimler
 
-- Python 3.11 veya üzeri
+- Python 3.11 (daha üst sürümlerde paket versiyon sıkıntıları çıkıyor)
 - pip
+
+### Python 3.11 İndirme
+ 
+Python 3.11 yüklü değilse: https://www.python.org/downloads/release/python-31115/
+ 
+Kurulum sırasında **"Add python.exe to PATH"** seçeneğini işaretlemenize gerek yok.
+
+Kurulduğunu görmek için:
+```powershell
+py -3.11 --version
+```
+
+Veya
+```powershell
+py --list
+```
 
 ### Adımlar
 
@@ -31,15 +47,45 @@ OpenGL tabanlı, gerçek zamanlı bir araç sürme simülasyonu. PyOpenGL ve Pyg
    cd Arac-Surme-Simulasyonu
    ```
 
-2. Gerekli kütüphaneleri yükleyin:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Projeyi çalıştırın:
-   ```bash
-   python main.py
-   ```
+2. Python 3.11 ile sanal ortam oluşturun:
+    ```powershell
+    py -3.11 -m venv venv
+    ```
+ 
+3. Sanal ortamı etkinleştirin:
+    ```powershell
+    venv\Scripts\Activate.ps1
+    ```
+   > Hata alırsanız önce şunu çalıştırın:
+   > ```powershell
+   > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   > ```
+   > Sonra tekrar deneyin.
+ 
+4. Bağımlılıkları yükleyin:
+    ```powershell
+    pip install -r requirements.txt
+    ```
+ 
+5. Projeyi çalıştırın:
+    ```powershell
+    python main.py
+    ```
+ 
+### Sanal Ortamdan Çıkış
+ 
+ Sanal ortamı kapatmak için:
+```powershell
+deactivate
+```
+ 
+### Sonraki Çalıştırmalarda
+ 
+Sanal ortamı tekrar etkinleştirip çalıştırmanız yeterlidir:
+```powershell
+venv\Scripts\Activate.ps1
+python main.py
+```
 
 ### Klasör Yapısı
 
